@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app>  <!-- data-ng-app is html5 standard  -->
+<head>
+	<title> Getting Started with Angular</title>
+</head>
+<body>
+	<div ng-init="people=[{name:'Mike', age:88},{name:'Swathi', age:18},{name:'Sanjay', age:22},{name:'Sachin', age:48}]">
+		<input type="text" ng-model='entry' />
+		<table>
+			<thead>
+				<tr><th>First Name </th></tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="person in people | filter:entry | orderBy:'age'">
+					<td> {{person.name | uppercase}} with age {{person.age}}</td>
+				</tr>
+			</tbody>	
+		</table>
+	</div>
+<script src="Scripts/angular.js"></script>
+</body>
+</html>

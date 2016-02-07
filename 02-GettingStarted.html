@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app>  <!-- data-ng-app is html5 standard  -->
+<head>
+	<title> Getting Started with Angular</title>
+</head>
+<body>
+	<div ng-init="names=['Mike','Lisa','James','Rose','Sai','Aravind','Amanda','Beiley']" >
+		<table>
+			<thead>
+				<tr><th>First Name </th></tr>   
+			</thead>
+			<tbody>
+				<tr ng-repeat="name in names">
+					<td>{{name}}</td>
+				</tr>
+			</tbody>
+		</table>
+<script src="Scripts/angular.js"></script>
+</body>
+</html>
